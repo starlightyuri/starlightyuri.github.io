@@ -1,0 +1,289 @@
+* {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@font-face {
+    font-family: 'Win95';
+    src:url(fonts/w95f.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Pixeloid Sans';
+    src: url(fonts/PixeloidSans-Bold.ttf);
+}
+
+@font-face{
+    font-family: 'PC98';
+    src: url(fonts/pc-9800.ttf);
+}
+
+body {
+    font-family: 'Win95', 'PC98';
+    background-color: #5583C1;
+    color: #0d0f1b;
+    font-size: medium;
+}
+
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.left, .right {
+    flex: 0 0 380px;
+}
+
+.left .window {
+    width: 380px;
+}
+
+.right .window {
+    width: 380px;
+}
+
+#hello {
+    max-width: 700px;
+}
+
+section {
+    margin-bottom: 10px;
+}
+
+.tab h3 {
+    color: #d8e6ff;
+    font-weight: normal;
+    display: inline-flex;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.window {
+    border: 3px solid #0d0f1b;
+    background-color: #e2e5ee;
+    padding: 3px;
+}
+
+.tab{
+    border: 3px solid #0d0f1b;
+    background-color: #1629db;
+    height: 26px;
+    position: relative;
+    font-family: 'Pixeloid Sans';
+    font-size: small;
+}
+
+svg {
+    shape-rendering: crispEdges;
+}
+
+#hello .tab::before {
+    content: url(img/icons/pixelarticons--user.svg); 
+}
+
+#hello .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+#time .tab::before {
+    content:url(img/icons/pixelarticons--date-time.svg);
+}
+
+#external .tab::before {
+    content:url(img/icons/pixelarticons--external-link-sharp.svg);
+}
+
+#credits .tab::before, #updates .tab::before, #labels .tab::before {
+    content: url(img/icons/pixelarticons--file-text-sharp.svg);
+}
+
+#guestbook .tab::before {
+    content: url(img/icons/pixelarticons--book-open.svg);
+}
+
+#music .tab::before {
+    content: url(img/icons/pixelarticons--music.svg);
+}
+
+#links .tab::before {
+    content: url(img/icons/pixelarticons--link.svg)
+}
+
+#chat .tab::before {
+    content: url(img/icons/pixelarticons--message-text.svg)
+}
+.tab::before {
+    height: 24px;
+    margin: 2px;
+    margin-top: 5px;
+    float: left;
+}
+
+.tab::after{
+    content:url(img/tab-after.svg);
+    display: block;
+    height: 22px;
+    position: absolute;
+    top: 3px;
+    right: 2px;
+}
+
+.content {
+    padding: 2px;
+    position: relative;
+    margin: 4px;
+}
+
+#clock, #clock-kal {
+    font-family: 'Pixeloid Sans';
+    font-size: 25px;
+}
+
+#time p {
+    margin: 2px;
+}
+
+#time span {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.notice .tab::after {
+    content: url(img/tab-close.svg);
+}
+
+.notice .content {
+    display: flex;
+    flex-direction: row;
+}
+
+.notice .content img {
+    height: 32px;
+    width: auto;
+    margin: 5px;
+    margin-right: 10px;
+}
+
+ul {
+    margin-left: -15px;
+}
+
+li {
+    line-height: 1.5;
+    padding-left: 5px;
+}
+
+li::marker {
+    content: ">"
+}
+
+.toggle {
+    text-align: center;
+    margin: 7px;
+}
+
+@keyframes title-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-1 * var(--scroll-distance)));
+    }
+}
+
+#title-box {
+    width: 480px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.song-info {
+    height: 48px;
+}
+#scroll-title {
+    text-align: center;
+    display: flex;
+}
+
+#scroll-title span {
+    flex-shrink: 0;
+    padding-right: 20px;
+}
+
+#songTitleCopy {
+    display: none;
+}
+
+#scroll-title.scrolling {
+    animation: title-scroll 17s linear infinite;
+}
+
+#scroll-title.scrolling #songTitleCopy {
+    display: inline-block;
+}
+
+#title-box:has(#scroll-title.scrolling) {
+    justify-content: flex-start;
+}
+
+.toggle button {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toggle svg {
+    display: block;
+    height: 32px;
+    width: auto;
+}
+
+.tog-button:hover path {
+    fill: #465ccb;
+}
+
+#pause {
+    display: none;
+}
+
+#labels img {
+    image-rendering: pixelated;
+}
+
+.head .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.head {
+    min-width: 520px;
+}
+.head .content h1 {
+    font-size: 48px;
+    font-family: 'PC98';
+    font-weight: bold;
+    margin: 0;
+    padding: 15px;
+    padding-top: 18px;
+}

@@ -1,0 +1,332 @@
+* {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@font-face {
+    font-family: 'Win95';
+    src:url(fonts/w95f.woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Pixeloid Sans';
+    src: url(fonts/PixeloidSans-Bold.ttf);
+}
+
+@font-face{
+    font-family: 'PC98';
+    src: url(fonts/pc-9800.ttf);
+}
+
+body {
+    font-family: 'Win95', 'PC98';
+    background-color: #5583C1;
+    color: #0d0f1b;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow: hidden;
+}
+
+.desktop {
+    position: relative;
+    flex: 1;
+    min-height: 100vh;
+}
+
+.window {
+    border: 3px solid #0d0f1b;
+    background-color: #e2e5ee;
+    padding: 3px;
+    width: 420px;
+    position: absolute;
+    z-index: auto;
+}
+
+.tab{
+    border: 3px solid #0d0f1b;
+    background-color: #1629db;
+    height: 26px;
+    position: relative;
+    font-family: 'Pixeloid Sans';
+    font-size: small;
+}
+
+a {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.content {
+    padding: 5px;
+    line-height: 22px;
+}
+
+svg {
+    shape-rendering: crispEdges;
+}
+
+img {
+pointer-events: none;
+}
+
+h3 {
+    color: #d8e6ff;
+    font-weight: normal;
+    display: inline-flex;
+    margin: 5px;
+}
+
+.tab button {
+    background: transparent;
+    border: none;
+    margin: 0;
+    float: right;
+    padding: 2px;
+}
+
+.dialog {
+    display: none;
+}
+
+.taskbar {
+    height: 50px;
+    background-color:#26325A;
+    padding: 5px 10px 5px 10px;
+}
+
+.clock {
+    text-align: right;
+    color:#d8e6ff;
+    font-size: 20px;
+    line-height: 22px;
+    padding: 5px;
+}
+
+.programs {
+    display: grid;
+    grid-template-columns: 100px 100px;
+}
+
+.collapsible {
+    display: none;
+}
+
+footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    z-index: 999999;
+}
+
+.programs button {
+    margin: 5px;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    font-family: 'Win95', 'PC98';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#d8e6ff;
+    line-height: 1.7;
+    border: 1.5px solid transparent;
+}
+
+.programs button:hover {
+    background-color:#6391ce;
+    border: 1.5px dotted #7fa9e0;
+}
+
+li::marker{
+    content: ">";
+}
+
+li {
+    padding-left: 4px;
+}
+/* music */
+
+.toggle {
+    text-align: center;
+    margin: 7px;
+}
+
+@keyframes title-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-1 * var(--scroll-distance)));
+    }
+}
+
+#title-box {
+    width: 480px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.song-info {
+    height: 48px;
+}
+#scroll-title {
+    text-align: center;
+    display: flex;
+}
+
+#scroll-title span {
+    flex-shrink: 0;
+    padding-right: 20px;
+}
+
+#songTitleCopy {
+    display: none;
+}
+
+#scroll-title.scrolling {
+    animation: title-scroll 17s linear infinite;
+}
+
+#scroll-title.scrolling #songTitleCopy {
+    display: inline-block;
+}
+
+#title-box:has(#scroll-title.scrolling) {
+    justify-content: flex-start;
+}
+
+.toggle button {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toggle svg {
+    display: block;
+    height: 32px;
+    width: auto;
+}
+
+.tog-button:hover path {
+    fill: #465ccb;
+}
+
+#pause {
+    display: none;
+}
+
+.fake-button {
+    position: absolute;
+    right: 27px;
+    top: 2px;
+}
+
+/* crt effect*/
+
+.crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 1000000;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0% {
+  opacity: 0.27861;
+  }
+  5% {
+  opacity: 0.34769;
+  }
+  10% {
+  opacity: 0.23604;
+  }
+  15% {
+  opacity: 0.10626;
+  }
+  20% {
+  opacity: 0.18128;
+  }
+  25% {
+  opacity: 0.10626;
+  }
+  30% {
+  opacity: 0.18128;
+  }
+  35% {
+  opacity: 0.23604;
+  }
+}
+
+.crt::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 1000000;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+
+#crtEffect {
+    display: none;
+}
+
+#crt-on {
+    display: none;
+}
+
+#settings button {
+    font-family: 'Win95', 'PC98';
+    padding: 2px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+}
+
+#settings button:hover{
+    text-decoration: none;
+}
+
+#open-collapsible {
+    background: transparent;
+    border: none;
+    text-decoration:underline;
+    font-family: 'Win95', 'PC98';
+    font-size: 16px;
+}
+
+#open-collapsible:hover {
+    text-decoration: none;
+}
