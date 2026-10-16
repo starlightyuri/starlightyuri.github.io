@@ -2,7 +2,13 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    box-sizing: border-box;
 }
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Win95';
     src:url(fonts/w95f.woff2);
@@ -31,25 +37,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
 }
 
 .left, .right {
     flex: 0 0 380px;
-    justify-content: center;
 }
 
-.mid {
-    justify-content: center;
-    align-items: center;
-}
-
-.left .window {
-    width: 380px;
-}
-
-.right .window {
+.left .window, .right .window {
     width: 380px;
 }
 
@@ -78,7 +74,8 @@ section {
 .tab{
     border: 3px solid #0d0f1b;
     background-color: #1629db;
-    height: 26px;
+    height: 28px;
+    padding: 2px;
     position: relative;
     font-family: 'Pixeloid Sans';
     font-size: small;
@@ -127,8 +124,6 @@ svg {
 }
 .tab::before {
     height: 24px;
-    margin: 2px;
-    margin-top: 5px;
     float: left;
 }
 
@@ -137,7 +132,7 @@ svg {
     display: block;
     height: 22px;
     position: absolute;
-    top: 3px;
+    top: 1px;
     right: 2px;
 }
 
@@ -297,6 +292,7 @@ li::marker {
 
 img {
     z-index: 10;
+    overflow-x: hidden
 }
 
 /* scroll bar*/
@@ -343,4 +339,89 @@ body::-webkit-scrollbar-button:hover, body ::-webkit-scrollbar-button:hover {
 body * {
   scrollbar-color: #333 transparent;
   scrollbar-width: thin;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        margin: 8px;
+        overflow-x: hidden;
+    }
+
+    .layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .left,
+    .mid,
+    .right {
+        flex: 1 1 auto;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .left .window,
+    .right .window,
+    .mid .window {
+        width: 100% !important;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .head {
+        min-width: 0;
+    }
+
+    .head .window {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    .head .content h1 {
+        font-size: 32px;
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    #hello .r {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    #hello .r img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    #music {
+        max-width: 100%;
+    }
+
+    #player {
+        width: 100% !important;
+        max-width: 480px;
+        aspect-ratio: 16 / 9;
+        height: auto !important;
+        box-sizing: border-box;
+    }
+
+    #player iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    #title-box {
+        width: 100%;
+    }
+
+    .chat-box,
+    #chattable {
+        width: 100% !important;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
 }
