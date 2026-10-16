@@ -31,11 +31,18 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
 .left, .right {
     flex: 0 0 380px;
+    justify-content: center;
+}
+
+.mid {
+    justify-content: center;
+    align-items: center;
 }
 
 .left .window {
@@ -286,4 +293,54 @@ li::marker {
     margin: 0;
     padding: 15px;
     padding-top: 18px;
+}
+
+img {
+    z-index: 10;
+}
+
+/* scroll bar*/
+
+body {
+   scrollbar-color: unset;
+   scrollbar-width: unset;
+}
+body::-webkit-scrollbar, body ::-webkit-scrollbar {
+     width: 20px;
+}
+body::-webkit-scrollbar-track, body ::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: #e2e5ee;
+  border: 1px solid #0d0f1b;
+}
+body::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb {
+  background: #c0c0c0; 
+  box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray;
+  border: 1px solid;
+  border-color: silver #000 #000 silver;
+}
+body::-webkit-scrollbar-button:single-button, body ::-webkit-scrollbar-button:single-button {
+  background-color: #c0c0c0;
+  width: calc(100% - 2px);
+  min-height: 20px;
+  box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray;
+  border: 1px solid;
+  border-color: silver #000 #000 silver;
+  
+}
+body::-webkit-scrollbar-button:single-button:vertical:increment, body ::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTAuNSAxNiAxNiIgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj4KPG1ldGFkYXRhPk1hZGUgd2l0aCBQaXhlbHMgdG8gU3ZnIGh0dHBzOi8vY29kZXBlbi5pby9zaHNoYXcvcGVuL1hieHZOajwvbWV0YWRhdGE+CjxwYXRoIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTQgNWg3TTUgNmg1TTYgN2gzTTcgOGgxIiAvPgo8L3N2Zz4=");
+  background-size: 100% 100%;
+}
+body::-webkit-scrollbar-button:single-button:vertical:decrement, body ::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTAuNSAxNiAxNiIgc2hhcGUtcmVuZGVyaW5nPSJjcmlzcEVkZ2VzIj4KPG1ldGFkYXRhPk1hZGUgd2l0aCBQaXhlbHMgdG8gU3ZnIGh0dHBzOi8vY29kZXBlbi5pby9zaHNoYXcvcGVuL1hieHZOajwvbWV0YWRhdGE+CjxwYXRoIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTcgNWgxTTYgNmgzTTUgN2g1TTQgOGg3IiAvPgo8L3N2Zz4=");
+  background-size: 100% 100%;
+}
+body::-webkit-scrollbar-button:hover, body ::-webkit-scrollbar-button:hover {
+  background: #B8BFCF;
+  
+}
+body * {
+  scrollbar-color: #333 transparent;
+  scrollbar-width: thin;
 }
