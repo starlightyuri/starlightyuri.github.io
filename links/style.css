@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Win95';
+    src: url('/src/fonts/w95f.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PC98';
+    src: url('/src/fonts/pc-9800.ttf');
+}
+
+* {
+    font-family: 'Win95', 'PC98';
+}
+
+body {
+    background-color: #5583C1;
+    color: #0d0f1b;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.window {
+    border: 2px solid #0d0f1b;
+    padding: 5px;
+    background-color: #e2e5ee;
+}
+
+.tab {
+    border: 2px solid #0d0f1b;
+    background-color: #1629db;
+    display: flex;
+    position: relative;
+    height: 24px;
+}
+
+svg {
+    shape-rendering: crispEdges;
+}
+
+.tab h3 {
+    margin: 0px;
+    margin-left: 2px;
+    margin-top: 1px;
+    font-weight: normal;
+    color: #d8e6ff;
+}
+
+.tab::after {
+    content: url('/src/img/tab-after.svg');
+    display: block;
+    height: 22px;
+    position: absolute;
+    right: 2px;
+    top: 1px;
+}
+
+.content button {
+    height: 32px;
+    background-color: #c0c0c0;
+    border: 1px solid #0d0f1b;
+}
+
+.content {
+    margin: 5px;
+}
+
+input{
+    width: 480px;
+    height: 32px;
+    border: 1px solid #0d0f1b;
+    border-radius: 3px;
+}
