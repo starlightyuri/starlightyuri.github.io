@@ -78,3 +78,10 @@ input{
     border: 1px solid #0d0f1b;
     border-radius: 3px;
 }
+
+.buttons button {
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
