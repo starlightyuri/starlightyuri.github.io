@@ -343,6 +343,10 @@ body * {
 
 @media (max-width: 600px) {
 
+    html {
+        overflow-x: hidden;
+    }
+    
     body {
         margin: 8px;
         overflow-x: hidden;
