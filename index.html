@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>starlightyuri</title>
+    <link rel="shortcut icon" href="src/img/trinkets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
+</head>
+<body>
+    <header style="justify-content: center; display: flex;">
+        <div class="window" id="title" style="width: 100%; max-width: 540px;">
+            <div class="tab"><h3>title.txt</h3></div>
+            <div class="content" style="text-align: center;">
+                <h1 style="font-family: 'PixeloidSans-Bold';">starlightyuri</h1>
+            </div>
+        </div>
+    </header>
+
+    <hr>
+
+    <div class="body">
+
+        <div class="left">
+            <section>
+                <div class="window" id="clock">
+                    <div class="tab"><h3>clock.exe</h3></div>
+                    <div class="content">
+                        <div class="time">
+                            <div class="you" style="display: flex; flex-direction: column; place-items: flex-end;">
+                                <span id="userDate"></span>
+                                <span id="userTime"></span>
+                                <p>for you</p>
+                            </div>
+                            <hr>
+                            <div class="kal">
+                                <span id="kalDate"></span><br>
+                                <span id="kalTime"></span>
+                                <p>for kal</p>
+                            </div>
+                        </div>
+                        <img src="src/img/decorations/d1.webp" style="position: absolute; top: 0; left: -10px; height: 90px;">
+                        <img src="src/img/decorations/miku.PNG" style="position: absolute; bottom: 0; right: 0;">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="window" id="links">
+                    <div class="tab"><h3>links.txt</h3></div>
+                    <div class="content">
+                        <ul>
+                            <li><a href="/legacy homepage/legacy.html">legacy homepage</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="window" id="external">
+                    <div class="tab"><h3>external.txt</h3></div>
+                    <div class="content">
+                        <ul>
+                            <li><a href="https://github.com/starlightyuri">github</a></li>
+                            <li><a href="https://instagram.com/mekata.fukaa">instagram</a></li>
+                            <li><a href="https://https://steamcommunity.com/profiles/76561199228342469/">steam</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div class="window" id="stamps">
+                    <div class="tab"><h3>stamps.md</h3></div>
+                    <div class="content">
+                        <p>these stamps are clickable. try them!</p>
+                        <div class="clickable">
+                            <button commandfor="osu" command="show-modal">
+                                <img src="/src/img/stamps/stamp.png">
+                            </button>
+
+                            <dialog id="osu">
+                                <div class="tab">
+                                    <h3>osu!</h3>
+                                    <div class="tabButtons">
+                                        <img src="/src/img/trinkets/decorative.svg" class="decorative">
+                                        <button command="close" commandfor="osu">
+                                            <img src="/src/img/trinkets/tab-close.svg">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="dialogBody">      
+                                    <p>howdy! you play osu? let's mutual!<br>
+                                        standard no mod player. trying to learn dt and deathstreams.<br>
+                                        <a href="https://osu.ppy.sh/users/26874790">my osu! profile here</a>
+                                    </p>
+                                    <p>here's some beatmap links</p>
+                                    <div class="beatmaps">
+                                        <a href="https://osu.ppy.sh/beatmapsets/33842" title="i just thought it was funny">
+                                            <img src="src/img/stamps/animecatgirls.png">
+                                        </a>
+                                        <a href="https://osu.ppy.sh/beatmapsets/778657">
+                                            <img src="src/img/stamps/firststorm.png">
+                                        </a>
+                                        <a href="https://osu.ppy.sh/beatmapsets/2353587">
+                                            <img src="src/img/stamps/chocolatescramble.png">
+                                        </a>
+                                    </div>
+                                    <p style="font-size: 12px; color: #a0a0a0">(found the rockefeller street stamp by pure coincidence and I thought it was funny to link the beatmap)</p>
+                                    <button id="openCollapsible">is a 6-digit's settings worth reference?</button>
+                                    <div class="collapsible" id="osuSettings">
+                                        <figure>
+                                            <img src="/src/img/tablet-area.png" alt="tablet area">
+                                            <figcaption>my tablet area</figcaption>
+                                        </figure>
+                                        <ul>
+                                            <li>main client: lazer</li>
+                                            <li>playstyle: tablet keyboard(middle index)</li>
+                                            <li>tablet: wacom ctl-472 with 1khz firmware</li>
+                                            <li>skin: <a href="https://osu.ppy.sh/community/forums/topics/2019099">freedom dive reimagined</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </dialog>
+
+                            <button commandfor="vocaloid" command="show-modal">
+                                <img src="/src/img/stamps/e68.gif">
+                            </button>
+
+                            <dialog id="vocaloid">
+                                <div class="tab">
+                                    <h3>vocaloid</h3>
+                                    <div class="tabButtons">
+                                        <img src="/src/img/trinkets/decorative.svg" class="decorative">
+                                        <button command="close" commandfor="vocaloid">
+                                            <img src="/src/img/trinkets/tab-close.svg">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="dialogBody">
+                                    <p>knew vocaloid as a kid, haven't seen myself to be away from it since then. I would say it's pretty clear from the playlist.</p>
+                                    <ul>
+                                        <li>fav producers: orangestar, aqu3ra, n-buna, deco*27, r-906</li>
+                                        <li>fav vocals: ia, miku, yukari, flower (both v and ci), one</li>
+                                    </ul>
+                                </div>
+                            </dialog>
+
+                            <button commandfor="pjsk" command="show-modal">
+                                <img src="/src/img/stamps/stamp (2).png">
+                            </button>
+
+                            <dialog id="pjsk">
+                                <div class="tab">
+                                    <h3>project sekai</h3>
+                                    <div class="tabButtons">
+                                        <img src="/src/img/trinkets/decorative.svg" class="decorative">
+                                        <button command="close" commandfor="pjsk">
+                                            <img src="/src/img/trinkets/tab-close.svg">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="dialogBody">
+                                    <img src="/src/img/stamps/ichika.png">
+                                    <p>I mostly focus on the rhythm game (can't go pass master 30-31). sometimes I play ranked and mysekai, but not that much when it comes to tiering and story.<br>
+                                        fellow project sekai player? add me</p>
+                                    <ul>
+                                        <li>jp server: 19728989086044168 (シアユリ)</li>
+                                        <li>en server: 701727717451628545 (starlightyuri)</li>
+                                    </ul>
+                                </div>
+                            </dialog>
+
+                            <button commandfor="hoyo" command="show-modal">
+                                <img src="/src/img/stamps/robin.gif">
+                            </button>
+
+                            <dialog id="hoyo">
+                                <div class="tab">
+                                    <h3>hoyoverse</h3>
+                                    <div class="tabButtons">
+                                        <img src="/src/img/trinkets/decorative.svg" class="decorative">
+                                        <button command="close" commandfor="hoyo">
+                                            <img src="/src/img/trinkets/tab-close.svg">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="dialogBody">
+                                    <p style="font-size: 12px; color: #a0a0a0">(forgive me for using robin as the thumbnail for hoyo)</p>
+                                    <a href="https://www.hoyolab.com/accountCenter/postList?id=154336124">my HoYoLAB profile.</a>
+                                    <p>I'm a hoyo game enjoyer. I mostly play because it's fun. mostly for the story and the characters. endgame? my accounts are bricks<br>
+                                        the teapot blueprints are still up on my hoyolab (hopefully, If it doesn't work tell me on this page's chat) <br>
+                                        uids? check my hoyolab hehe.
+                                    </p>
+                                    <ul>
+                                        <li>fav chars: <b>sunday</b>, <b>acheron</b>, tsaritsa, furina, ayato</li>
+                                        <li>mains: sunday, ayato, miyabi, soldier11, acheron, xiao</li>
+                                    </ul>
+                                </div>
+                            </dialog>
+
+                            <button commandfor="games" command="show-modal">
+                                <img src="/src/img/stamps/steam.png">
+                            </button>
+
+                            <dialog id="games">
+                                <div class="tab">
+                                    <h3>other games</h3>
+                                    <div class="tabButtons">
+                                        <img src="/src/img/trinkets/decorative.svg" class="decorative">
+                                        <button command="close" commandfor="games">
+                                            <img src="/src/img/trinkets/tab-close.svg">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="dialogBody">
+                                    <a href="https://store.steampowered.com/wishlist/profiles/76561199228342469">really appreciate it if someone buys me my wishlist...</a>
+                                    <p>I will play pretty much anything if ppl say it's good. (except for jumpscare horror. psychological horror I can handle. maybe)
+                                        I still have a lot of games waiting to be played. if you want to spread the gospel of some game, go ahead. no guarantee I will definitely play it though.
+                                    </p>
+                                    <ul>
+                                        <li>playing: stardew valley, dmc5</li>
+                                        <li>in library: blasphemous, r.e.p.o, helltaker, ddlc, nso, hollow knight</li>
+                                        <li>want to play: silksong, oneshot, constance, space for the unbound</li>
+                                    </ul>
+                                </div>
+                            </dialog>
+
+                        </div>
+                        <hr>
+                        <p>these stamps are for cosmetics only.</p>
+                        <div class="displayOnly">
+                            <img src="/src/img/stamps/d55.gif">
+                            <img src="/src/img/stamps/stamp (1).png">
+                            <img src="/src/img/stamps/iluvthenight.gif">
+                            <img src="/src/img/stamps/e58.gif">
+                            <img src="/src/img/stamps/stars.webp">
+                            <img src="/src/img/stamps/clouds.webp">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        
+        <div class="mid">
+            <section>
+                <div class="window" id="main">
+                    <div class="tab"><h3>main.md</h3></div>
+                    <div class="content">
+                        <div class="l">
+                            <p>I'm Kalya but you can call me Kal for short. Highschool student, pixel artist, beginner coder, retired debater, weeb, and bookworm. I would say I'm socially awkward (I'm not good at dealing with people)</p>
+                            <p>I decided to make this page for fun. I'm planning to use this for my future web projects. I'm still not over to the fact the government decides to block neocities. This one is a revamp to a slightly older one to fix mobile compatibility issues. (not the one in legacy homepage. that's an even older one)
+                               desktop page will be gone for a while until I make it good.
+                            </p>
+                            <p>Enjoy your stay here.</p>
+                            <div class="nendoroids">
+                                <img src="src/img/decorations/f1.png">
+                                <img src="src/img/decorations/f2.png">
+                                <img src="src/img/decorations/f3.png">
+                            </div>
+                        </div>
+                        <div class="r">
+                            <img src="src/img/yuri-portrait.png" alt="profile image" style="max-width: 400px; height: auto; width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="window" id="musicPlayer">
+                    <div class="tab"><h3>music_player.exe</h3></div>
+                    <div class="content" style="text-align: center;">
+                        <div class="playerTop">
+                            <div class="playerWindow">
+                                <div id="player"></div>
+                            </div>
+                            <div class="songInfo">
+                                <div class="titleBox" id="titleBox">
+                                    <div id="scroll">
+                                        <span id="songTitle"></span>
+                                        <span id="songTitle2"></span>
+                                    </div>
+                                </div>
+                                <span id="songAuthor"></span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="bottomBox">
+                            <div class="controls">
+                                <button id="previous">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                        <path fill="#1629db" d="M8 13v-2h2v2zm2-2V9h2v2zm0 4v-2h2v2zm2-6V7h2v2zm0 8v-2h2v2zm2-10V5h2v2zm0 12v-2h2v2z" />
+                                    </svg>
+                                </button>
+                                
+                                <button id="playback">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" id="play">
+                                        <path fill="#1629db" d="M9 17h2v-2h2v-2h2v-2h-2V9h-2V7H9z" />
+                                    </svg>
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" id="pause">
+                                        <path fill="#1629db" d="M10 20H4V4h6zm8-16v16h-6V4z" />
+                                    </svg>
+                                </button>
+                                
+                                <button id="next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                        <path fill="#1629db" d="M16 13v-2h-2v2zm-2-2V9h-2v2zm0 4v-2h-2v2zm-2-6V7h-2v2zm0 8v-2h-2v2zM10 7V5H8v2zm0 12v-2H8v2z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="https://youtube.com/playlist?list=PLM4pT55ylV-4" style="font-family: 'W95F'; color: #0d0f1b;">check full playlist here</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="right">
+            <section>
+                <div class="window" id="labels">
+                    <div class="tab"><h3>labels.md</h3></div>
+                    <div class="content">
+                        <div class="labelBox">
+                            <img src="/src/img/labels/She_Her.png" alt="She/Her pronouns">
+                            <img src="/src/img/labels/INTP.png" alt="INTP">
+                            <img src="/src/img/labels/Introvert.png" alt="Introvert">
+                            <img src="/src/img/labels/Indonesian.png" alt="Indonesian">
+                            <img src="/src/img/labels/English.png" alt="English">
+                            <img src="/src/img/labels/Japanese.png" alt="Japanese">
+                            <img src="/src/img/labels/UTC+7.png" alt="UTC+7">
+                            <img src="/src/img/labels/Student.png" alt="Student">
+                            <img src="/src/img/labels/C++_basics.png" alt="C++ Basics">
+                            <img src="/src/img/labels/HTML5.png" alt="HTML5">
+                            <img src="/src/img/labels/VSCode.png" alt="VS Code">
+                            <img src="/src/img/labels/Windows.png" alt="Windows">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="window" id="updates">
+                    <div class="tab"><h3>updates.md</h3></div>
+                    <div class="content">
+                        <ul>
+                            <li>2026/11/26 site reopened</li>
+                            <li>2026/10/15 site opened</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="window" id="chat">
+                    <div class="tab"><h3>chat.exe</h3></div>
+                    <div class="content">
+                        <div class="frameBox"><iframe src="https://iframe.chat/embed?chat=15511225" id="chattable"></iframe></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+<script src="/src/script.js"></script>
+</html>
