@@ -254,6 +254,10 @@ button:hover {
     max-width: 100%;
 }
 
+.labelBox img {
+    image-rendering: pixelated;
+}
+
 /* icons */
 #clock .tab::before {
     content: url(/src/img/icons/pixelarticons--date-time.svg);
@@ -394,6 +398,7 @@ dialog {
 
 #openCollapsible {
     text-decoration: underline;
+    font-family: 'W95F', 'PC-9800', sans-serif;
 }
 
 #openCollapsible:hover {
